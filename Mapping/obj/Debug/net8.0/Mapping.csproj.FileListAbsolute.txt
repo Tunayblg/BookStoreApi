@@ -1,0 +1,17 @@
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\bin\Debug\net8.0\Mapping.deps.json
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\bin\Debug\net8.0\Mapping.dll
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\bin\Debug\net8.0\Mapping.pdb
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\bin\Debug\net8.0\DTOs.dll
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\bin\Debug\net8.0\Entities.dll
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\bin\Debug\net8.0\DTOs.pdb
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\bin\Debug\net8.0\Entities.pdb
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\Mapping.csproj.AssemblyReference.cache
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\Mapping.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\Mapping.AssemblyInfoInputs.cache
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\Mapping.AssemblyInfo.cs
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\Mapping.csproj.CoreCompileInputs.cache
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\Mapping.csproj.CopyComplete
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\Mapping.dll
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\refint\Mapping.dll
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\Mapping.pdb
+C:\Users\tunay\OneDrive\Masaüstü\.Net\BookStoreApi\Mapping\obj\Debug\net8.0\ref\Mapping.dll
