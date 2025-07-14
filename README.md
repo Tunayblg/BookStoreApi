@@ -1,6 +1,7 @@
 ﻿# BookStore API (.NET 8, EF Core, AutoMapper)
 
 This project is a layered RESTful API for managing books, built with ASP.NET Core 8 and Entity Framework Core. It follows clean architecture principles with clearly separated concerns using folders such as `Entities`, `DTOs`, `Repositories`, and `Services`.
+Book records are stored in a SQL Server database using Entity Framework Core for data access.
 
 ---
 
