@@ -51,4 +51,4 @@ Contains business rules and handles interactions between repositories and contro
 Mapping/
 Includes AutoMapper configuration for DTO <-> Entity mapping. Keeps mapping logic centralized.
 
-This structure is highly scalable and prepares the codebase for adding validation, authentication, or additional entities in future projects.
+
