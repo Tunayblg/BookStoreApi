@@ -58,48 +58,9 @@ HTTP request → BookController → BookService → BookRepository
 
 The application registers service and repository interfaces with scoped lifetimes. EF Core queries and persistence calls use asynchronous methods. This is a layered architecture with separate class-library projects; the folder structure alone does not imply a complete production architecture.
 
-## Run Locally
+## Requirements
 
-Requirements: .NET 8 SDK, an accessible SQL Server instance and an EF Core 8 CLI tool.
-
-```sh
-git clone https://github.com/Tunayblg/BookStoreApi.git
-cd BookStoreApi
-dotnet restore BookStoreApp/BookStoreApp.csproj
-```
-
-Configure `ConnectionStrings:DefaultConnection` for your local SQL Server. For example, in PowerShell with Windows integrated authentication:
-
-```powershell
-$env:ConnectionStrings__DefaultConnection = 'Server=localhost;Database=BookStoreDb;Trusted_Connection=True;TrustServerCertificate=True'
-```
-
-This example assumes a locally trusted development database. Adjust the server and authentication settings for your environment. Do not commit database passwords.
-
-If `dotnet ef` is not installed, install a version matching the project's EF Core major version:
-
-```sh
-dotnet tool install --global dotnet-ef --version "8.*"
-```
-
-Apply the existing migrations from the repository root, then start the included HTTPS development profile:
-
-```sh
-dotnet ef database update --project Data/Data.csproj --startup-project BookStoreApp/BookStoreApp.csproj
-dotnet dev-certs https --trust
-dotnet run --project BookStoreApp/BookStoreApp.csproj --launch-profile https
-```
-
-Swagger is available at `https://localhost:7146/swagger` under this profile. It is enabled only in the Development environment. The application does not automatically apply migrations at startup.
-
-### Example Requests
-
-```sh
-curl "https://localhost:7146/api/Book?sort=asc"
-curl "https://localhost:7146/api/Book/1"
-```
-
-Use Swagger's request editor to submit the JSON payload above. Mutation responses are text messages rather than the created or updated object.
+Requires .NET 8 and SQL Server, with a configured connection string and the included EF Core migrations applied. Swagger UI is available in the Development environment.
 
 ## Current Limitations
 
