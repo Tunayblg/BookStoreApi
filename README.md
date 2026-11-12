@@ -1,31 +1,35 @@
-﻿# BookStore API (.NET 8, EF Core, AutoMapper)
+# BookStore API
 
-This project is a layered RESTful API for managing books, built with ASP.NET Core 8 and Entity Framework Core. It follows clean architecture principles with clearly separated concerns using folders such as `Entities`, `DTOs`, `Repositories`, and `Services`.
-Book records are stored in a SQL Server database using Entity Framework Core for data access.
+**A focused REST API for managing your book catalog.**
 
----
+Create, browse, update and remove book records with a layered ASP.NET Core 8 API. SQL Server stores the catalog, Entity Framework Core handles data access, and AutoMapper maps between entities and DTOs.
 
 ## Features
 
-- Retrieve all books with optional sorting (by `Price` or `PageCount`)
-- Get book by ID
-- Add a new book
-- Update an existing book
-- Delete a book
-- AutoMapper integration for clean DTO–entity mapping
-- Seed data with 5 initial books
+- List books and sort by price or page count, ascending or descending
+- Retrieve an individual book by ID
+- Create, update and delete book records
+- Map request and response DTOs with AutoMapper
+- Start with five seeded book records
 
----
+## Tech Stack
+
+C# · ASP.NET Core 8 · Entity Framework Core · Microsoft SQL Server · AutoMapper
 
 ## Sorting
 
- can sort the books by:
+Use the `sort` query parameter when listing books:
 
-- `price` → ascending (`?sort=price`) or descending (`?sort=price_desc`)
-- `pageCount` → ascending (`?sort=pageCount`) or descending (`?sort=pageCount_desc`)
+| Order | Query |
+| --- | --- |
+| Price: low to high | `?sort=price` |
+| Price: high to low | `?sort=price_desc` |
+| Page count: low to high | `?sort=pageCount` |
+| Page count: high to low | `?sort=pageCount_desc` |
 
+## Example Book Payload
 
-## Sample Book JSON (for POST/PUT)
+Use this JSON shape when creating or updating a book:
 
 ```json
 {
@@ -33,22 +37,16 @@ Book records are stored in a SQL Server database using Entity Framework Core for
   "price": 199.99,
   "author": "Donald E. Knuth",
   "pageCount": 672
+}
+```
 
- Project Structure Highlights
+## Project Structure
 
-Entities/
-Holds core domain models (e.g., Book). This keeps domain logic isolated from infrastructure.
-
-DTOs/
-Prevents exposing internal models in API responses or requests. Essential for secure and clean APIs.
-
-Repositories/
-Encapsulates database operations. Promotes testability and maintains separation from business logic.
-
-Services/
-Contains business rules and handles interactions between repositories and controllers.
-
-Mapping/
-Includes AutoMapper configuration for DTO <-> Entity mapping. Keeps mapping logic centralized.
-
-
+| Folder | Responsibility |
+| --- | --- |
+| `Entities/` | Book data models |
+| `DTOs/` | Request and response data shapes |
+| `Data/` | Database context and data configuration |
+| `Repositories/` | Database operations |
+| `Services/` | Application logic between controllers and repositories |
+| `Mapping/` | AutoMapper profiles for entities and DTOs |
